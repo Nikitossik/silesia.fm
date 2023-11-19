@@ -1,7 +1,5 @@
 import '../css/style.css';
 
-
-
 document.addEventListener('click', (e) => {
     const button = e.target.closest('[data-drawer-target]');
     if (!button) return;
