@@ -1,0 +1,36 @@
+/*global swiper classes*/
+
+.swiper {
+  --swiper-navigation-color: theme("colors.white");
+  --swiper-pagination-color: theme("colors.sky.500");
+  --swiper-scrollbar-bg-color: theme("colors.sky.200");
+  --swiper-scrollbar-drag-bg-color: theme("colors.sky.500");
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-navigation-size: 3.5rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply bg-sky-300/50 rounded-md backdrop-blur-md;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  --swiper-navigation-size: 1.5rem;
+}
+
+/*for content sliders only*/
+
+.content-slider {
+  --swiper-pagination-bullet-inactive-color: theme("colors.sky.300");
+  @apply rounded-xl;
+}
+
+.show-more-slider {
+  --swiper-pagination-color: theme("colors.white");
+  --swiper-pagination-bullet-inactive-color: theme("colors.sky.100");
+  --swiper-scrollbar-bg-color: theme("colors.sky.100");
+  --swiper-scrollbar-drag-bg-color: theme("colors.sky.700");
+}
