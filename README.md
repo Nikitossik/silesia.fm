@@ -39,17 +39,17 @@ This page has all the shows that radio runs
 This page shows a detailed description of a show and other shows the user would like based on category or genre.
 
 ## Podcasts 
-![screenshot of the shows page](/screenshots/shows.png)
+![screenshot of the shows page](/screenshots/podcasts.png)
 
 This page has all the podcasts that radio runs
 
 ## Podcast page
-![screenshot of the shows page](/screenshots/show.png)
+![screenshot of the shows page](/screenshots/podcast.png)
 
 This page shows a detailed description of a podcast, available episodes and other podcasts the user would like based on category or genre.
 
 ## Schedule 
-![screenshot of the shows page](/screenshots/schedle.png)
+![screenshot of the shows page](/screenshots/schedule.png)
 
 This page contains a weekly show tab-schedule. Based on today's day, the current schedule is displayed   
 
