@@ -1,1 +1,0 @@
-import"./script-30782ced.js";const e=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"],s=new Date,a=e[s.getDay()];window.addEventListener("load",t=>{FlowbiteInstances.getInstance("Tabs","schedule-tab").show(`#${a}`)});
