@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SilesiaFM</title>
+    <title>Moje konto SilesiaFM</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body class="min-h-screen">
     <div class="flex flex-col min-h-screen antialiased bg-white scroll-smooth	">
 
-        <nav class="fixed top-0 left-0 w-full z-40 bg-sky-100
+        <nav class="fixed top-0 left-0 w-full z-40 bg-sky-50
        border-b border-sky-500 px-4 py-2.5">
             <div
                 class="grid gap-y-2 md:grid-cols-[min-content,_auto,min-content] lg:grid-cols-[minmax(min-content,_15rem),_auto,min-content] items-center ">
                 <div class="flex gap-x-4 justify-start items-center pr-4">
 
                     <a href=" ./index.html" class="flex items-center justify-between">
-                        <span class="self-center text-2xl font-bold whitespace-nowrap text-sky-500">Silesia.fm</span>
+                        <span class="self-center text-2xl font-bold whitespace-nowrap text-sky-700">Silesia.fm</span>
                     </a>
 
                 </div>
                 <div class="hidden md:flex md:col-span-1 gap-x-2 pr-6 items-center">
                     <div class="flex items-center gap-x-2">
-                        <div class="animate-pulse w-5 h-5 bg-red-700 rounded-full"></div>
+                        <div class="motion-safe:animate-pulse motion-reduce:hidden w-5 h-5 bg-red-700 rounded-full">
+                        </div>
                         <span class="hidden lg:inline whitespace-nowrap font-bold text-lg text-sky-900">Na żywo</span>
                     </div>
-                    <button data-audio="#audio" data-tooltip-target="play-button-tooltip"
-                        data-tooltip-placement="bottom"
-                        class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400">
+                    <button role="button" data-audio="#audio" aria-label="Play current show"
+                        data-tooltip-target="play-button-tooltip" data-tooltip-placement="bottom"
+                        class="p-2 text-sky-700 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400">
 
                         <svg data-audio-play xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5"
                             viewBox="0 0 384 512">
@@ -52,8 +53,9 @@
                     <p class="basis-full text-sky-900 whitespace-nowrap font-semibold">
                         Okno na południe
                     </p>
-                    <button data-tooltip-target="like-button-tooltip" data-tooltip-placement="bottom"
-                        class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  ">
+                    <button role="button" data-tooltip-target="like-button-tooltip" aria-label="Like this show"
+                        data-tooltip-placement="bottom"
+                        class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5"
                             viewBox="0 0 512 512">
                             <path
@@ -66,8 +68,9 @@
                         Zapisz do uliubionych
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
-                    <button type="button" data-tooltip-target="player-button-tooltip" data-tooltip-placement="bottom"
-                        class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  "
+                    <button role="button" type="button" aria-label="open-player" aria-label="Open interactive player"
+                        data-tooltip-target="player-button-tooltip" data-tooltip-placement="bottom"
+                        class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 "
                         data-drawer-target="player-drawer" data-drawer-backdrop="false"
                         data-drawer-toggle="player-drawer" data-drawer-placement="top" data-drawer-body-scrolling="true"
                         aria-controls="player-drawer" aria-expanded="false">
@@ -83,9 +86,9 @@
                         Otwórz player
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
-                    <a href="./schedule.html" data-tooltip-target="schedule-button-tooltip"
+                    <a href="./schedule.html" aria-label="go to schedule" data-tooltip-target="schedule-button-tooltip"
                         data-tooltip-placement="bottom"
-                        class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  "
+                        class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 "
                         aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor"
                             viewBox="0 0 448 512">
@@ -101,7 +104,7 @@
                 </div>
                 <div class=" col-start-3 justify-end flex items-center gap-x-2">
                     <form action="#" method="GET" class="hidden md:block md:w-36 lg:w-48">
-                        <label for="sidebar-search" class="sr-only">Search</label>
+                        <label for="sidebar-search" class="sr-only">Szukaj na stronie</label>
                         <div class="relative">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <svg class="w-6 h-6 text-sky-500 " fill="currentColor" viewBox="0 0 20 20"
@@ -111,11 +114,12 @@
                                     </path>
                                 </svg>
                             </div>
-                            <input type="text" name="search" id="sidebar-search" class="pl-10 input"
+                            <input type="text" name="search" aria-label="Search" id="sidebar-search" class="pl-10 input"
                                 placeholder="Szukaj..." />
                         </div>
                     </form>
-                    <button type="button" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation"
+                    <button role="button" type="button" data-drawer-toggle="drawer-navigation"
+                        aria-controls="drawer-navigation"
                         class="p-2 md:hidden text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  ">
                         <span class="sr-only">Toggle search</span>
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -125,20 +129,20 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="./konto.html#login" class="flex font-medium items-center p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg 
+                    <a href="./konto.html#login" class="flex font-medium items-center p-2 text-sky-700 transition duration-200 bg-sky-200 rounded-lg 
             
-            cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300  focus:ring-2 focus:ring-sky-400  ">
+            cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300  focus:ring-2 focus:ring-sky-500  ">
                         <span class="sr-only">Log in</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512"
                             fill="currentColor">
                             <path
                                 d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                         </svg>
-                        <span class="ml-3 hidden lg:block">Konto</span>
+                        <span class="ml-1 hidden lg:block text-sky-800">Konto</span>
                     </a>
-                    <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
+                    <button role="button" data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
                         aria-controls="drawer-navigation"
-                        class="p-2 text-sky-600 transition duration-200 lg:hidden bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  ">
+                        class="p-2 text-sky-700 transition duration-200 lg:hidden bg-sky-200 rounded-lg cursor-pointer hover:text-sky-800 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-800  focus:ring-2 focus:ring-sky-400  ">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -160,12 +164,12 @@
         <!-- MOBILE PLAYER HEADER -->
 
         <div
-            class="md:hidden border-b border-sky-500 px-4 py-2 bg-sky-100 fixed left-0 right-0 top-14 z-30 flex gap-x-2 items-center">
+            class="md:hidden border-b border-sky-500 px-4 py-2 bg-sky-50 fixed left-0 right-0 top-14 z-30 flex gap-x-2 items-center">
             <div class="flex items-center gap-x-2">
-                <div class="animate-pulse w-5 h-5 bg-red-700 rounded-full"></div>
+                <div class="motion-safe:animate-pulse motion-reduce:hidden w-5 h-5 bg-red-700 rounded-full"></div>
             </div>
-            <button data-audio="#audio"
-                class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  ">
+            <button role="button" aria-label="Play current show" data-audio="#audio"
+                class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 ">
 
                 <svg data-audio-play xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5"
                     viewBox="0 0 384 512">
@@ -184,16 +188,16 @@
             <p class="flex-auto basis-full text-sky-900 truncate font-semibold">
                 Okno na południe
             </p>
-            <button
-                class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  ">
+            <button role="button" aria-label="Like this show"
+                class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 512 512">
                     <path
                         d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                 </svg>
                 <span class="sr-only">Like</span>
             </button>
-            <button type="button"
-                class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  "
+            <button role="button" type="button" aria-label="Open interactive player"
+                class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 "
                 data-drawer-target="player-drawer" data-drawer-backdrop="false" data-drawer-toggle="player-drawer"
                 data-drawer-placement="top" data-drawer-body-scrolling="true" aria-controls="player-drawer"
                 aria-expanded="false">
@@ -204,8 +208,8 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <a href="./schedule.html"
-                class="p-2 text-sky-600 transition duration-200 bg-sky-200 rounded-lg cursor-pointer hover:text-sky-700 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700  focus:ring-2 focus:ring-sky-400  "
+            <a href="./schedule.html" aria-label="go to schedule"
+                class="p-2 text-sky-700 transition duration-200 rounded-lg  bg-sky-200  cursor-pointer hover:text-sky-900 hover:bg-sky-300 focus:bg-sky-300 focus:text-sky-700 focus:ring-2 focus:ring-sky-400 "
                 aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512">
                     <path
@@ -223,20 +227,22 @@
         <!-- PLAYER DRAWER -->
 
         <div id="player-drawer"
-            class="fixed top-0 rounded-b-xl left-0 right-0 z-[25] w-full pt-28 lg:w-[calc(100%-16rem)] lg:left-64 md:pt-16 transition-transform -translate-y-full bg-sky-100/80 backdrop-blur-3xl"
+            class="fixed top-0 rounded-b-xl left-0 right-0 z-[25] w-full pt-28 lg:w-[calc(100%-16rem)] lg:left-64 md:pt-16 transition-transform -translate-y-full bg-white/80 backdrop-blur-3xl"
             tabindex="-1">
             <div class="grid divide-y-2 divide-sky-700 px-4 py-4 xl:grid-cols-2 xl:divide-y-0 xl:divide-x-2">
                 <div class="flex flex-col gap-y-2 pb-4 xl:pb-0 xl:pr-4">
                     <header class="flex justify-between items-center font-semibold text-sky-900 text-lg">
                         <div class=" flex items-center space-x-1">
-                            <div class="animate-pulse bg-red-500 w-2 h-2 rounded-full"></div>
+                            <div class="motion-safe:animate-pulse motion-reduce:hidden bg-red-500 w-2 h-2 rounded-full">
+                            </div>
                             <span>Katowice</span>
                         </div>
                         <p>10:00 - 15:00</p>
                     </header>
                     <div class="flex items-start gap-x-3">
-                        <button data-audio="#audio" type="button" data-tooltip-placement="top"
-                            class="relative overflow-hidden rounded-md basis-1/2 max-w-[10rem] shrink-0">
+                        <button role="button" data-audio="#audio" aria-label="Play current show" type="button"
+                            data-tooltip-placement="top"
+                            class="relative overflow-hidden rounded-md basis-1/2 max-w-[10rem] shrink-0" tabindex="-1">
                             <img src="./src/images/shows/2.webp" alt="Okno na południe">
                             <div class="bg-sky-900/40 z-10 p-2 absolute inset-0">
                                 <div class="flex items-center p-1 text-white rounded-lg absolute bottom-2 left-2">
@@ -299,7 +305,7 @@
             border-sky-500 lg:translate-x-0 " aria-label="Sidenav" id="drawer-navigation">
             <div class="flex flex-col overflow-y-auto py-5 px-4 h-full">
                 <form action="#" method="GET" class="md:hidden mb-2">
-                    <label for="mobile-sidebar-search" class="sr-only">Search</label>
+                    <label for="mobile-sidebar-search" class="sr-only">Szukaj na stronie</label>
                     <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <svg class="w-6 h-6 text-sky-500 " fill="currentColor" viewBox="0 0 20 20"
@@ -309,21 +315,21 @@
                                 </path>
                             </svg>
                         </div>
-                        <input type="text" name="search" id="mobile-sidebar-search" class="pl-10 input"
-                            placeholder="Szukaj..." />
+                        <input type="text" name="search" aria-label="Search" id="mobile-sidebar-search"
+                            class="pl-10 input" placeholder="Szukaj..." />
                     </div>
                 </form>
                 <ul class="md:space-y-1">
                     <li>
                         <a href="./shows.html"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/tv-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6" alt="Audycje">
                             <span class="ml-3">Audycje</span>
                         </a>
                     </li>
                     <li>
                         <a href="./podcasts.html"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/microphone-broadcast-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6"
                                 alt="Podkasty">
                             <span class="ml-3">Podkasty</span>
@@ -331,21 +337,21 @@
                     </li>
                     <li>
                         <a href="./schedule.html"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/clock-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6" alt="Ramówka">
                             <span class="ml-3">Ramówka</span>
                         </a>
                     </li>
                     <li>
                         <a href="./index.html#events"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/pin-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6" alt="Wydarzenia">
                             <span class="ml-3">Wydarzenia</span>
                         </a>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/talk-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6" alt="Kontakt">
                             <span class="ml-3">Kontakt</span>
                         </a>
@@ -354,8 +360,8 @@
 
                 <ul class="pt-3 mt-3 md:pt-4 md:mt-4 md:space-y-1 border-t border-sky-500 ">
                     <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  "
+                        <button role="button" type="button"
+                            class="flex items-center p-2 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-4 focus:ring-sky-500 focus:ring-4 focus:ring-sky-500"
                             aria-controls="dropdown-info" data-collapse-toggle="dropdown-info">
                             <img src="./src/icons/file-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6" alt="Informacje">
                             <span class="flex-1 ml-3 text-left whitespace-nowrap">Informacje</span>
@@ -369,22 +375,22 @@
                         <ul id="dropdown-info" class="hidden py-2 space-y-2">
                             <li>
                                 <a href="#"
-                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  ">O
+                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-2 focus:ring-sky-500">O
                                     nas</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  ">Reklama</a>
+                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-2 focus:ring-sky-500">Reklama</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  ">Praca</a>
+                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-2 focus:ring-sky-500">Praca</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <button type="button"
-                            class="flex items-center p-2 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  "
+                        <button role="button" type="button"
+                            class="flex items-center p-2 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-4 focus:ring-sky-500 focus:ring-4 focus:ring-sky-500"
                             aria-controls="dropdown-regulations" data-collapse-toggle="dropdown-regulations">
                             <img src="./src/icons/notebook-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6"
                                 alt="Regulaminy">
@@ -399,17 +405,17 @@
                         <ul id="dropdown-regulations" class="hidden py-2 md:space-y-1">
                             <li>
                                 <a href="#"
-                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  ">Konkursy</a>
+                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-2 focus:ring-sky-500">Konkursy</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200  ">Samoregulacja</a>
+                                    class="flex items-center px-2 py-1 pl-8 w-full text-base font-medium text-sky-900 rounded-lg transition duration-75 group hover:bg-sky-200 focus:ring-2 focus:ring-sky-500">Samoregulacja</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"
-                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200">
+                            class="flex items-center p-2 text-base font-medium text-sky-900 rounded-lg transition duration-75 hover:bg-sky-200 focus:ring-4 focus:ring-sky-500">
                             <img src="./src/icons/star-svgrepo-com.svg" class="w-8 h-8 lg:w-6 lg:h-6"
                                 alt="Zostań patronem">
                             <span class="ml-3">Zostań patronem</span>
@@ -417,32 +423,32 @@
                     </li>
                 </ul>
                 <div class="flex-auto flex justify-center items-end">
-                    <a href="#"
-                        class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                    <a href="#" aria-label="instagram"
+                        class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7" viewBox="0 0 448 512"
                             fill="currentColor">
                             <path
                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                         </svg>
                     </a>
-                    <a href="#"
-                        class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                    <a href="#" aria-label="facebook"
+                        class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7" viewBox="0 0 448 512"
                             fill="currentColor">
                             <path
                                 d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
                         </svg>
                     </a>
-                    <a href="#"
-                        class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                    <a href="#" aria-label="twitter"
+                        class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7" viewBox="0 0 448 512"
                             fill="currentColor">
                             <path
                                 d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM351.3 199.3v0c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3 .6 10.4 .8 15.8 .8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3c-9-6-16.4-14.1-21.5-23.6s-7.8-20.2-7.7-31c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34c.2 2.8 .2 5.7 .2 8.5z" />
                         </svg>
                     </a>
-                    <a href="#"
-                        class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                    <a href="#" aria-label="youtube"
+                        class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7" viewBox="0 0 576 512"
                             fill="currentColor">
                             <path
@@ -457,128 +463,169 @@
             <div class="flex-auto">
                 <section class="px-4 pt-16 pb-4 sm:pb-6 md:pt-12 md:pb-8 ">
                     <header class="mb-4 md:mb-8">
-                        <h2 class="text-sky-800 text-2xl sm:text-3xl lg:text-4xl font-bold">Moje konto
-                        </h2>
+                        <h1 class="text-sky-800 text-2xl sm:text-3xl lg:text-4xl font-bold">Moje konto
+                        </h1>
                     </header>
-                    <form method="get"
-                        class="max-w-sm w-full mx-auto bg-sky-100 rounded-md px-4 py-8 md:px-6 md:py-10 border border-sky-500">
+                    <div
+                        class="max-w-sm w-full mx-auto bg-sky-50 rounded-md px-4 py-8 md:px-6 md:py-10 border border-sky-500">
                         <div class="border-b border-sky-500">
                             <ul class="flex justify-center text-sm font-medium text-center" id="form-tab"
                                 data-tabs-toggle="#form-tab-content" role="tablist">
                                 <li role="presentation">
                                     <button
-                                        class="block w-full rounded-t-lg p-4 transition duration-200 hover:bg-sky-500 hover:text-white aria-selected:bg-sky-500 aria-selected:text-white aria-selected:border-sky-700"
-                                        id="dashboard-tab" data-tabs-target="#login" type="button" role="tab"
-                                        aria-controls="dashboard" aria-selected="false">Login</button>
+                                        class="block w-full rounded-t-lg p-4 transition duration-200 text-slate-700 hover:bg-sky-700/75 hover:text-white aria-selected:bg-sky-700 aria-selected:text-white aria-selected:border-sky-900"
+                                        id="log-in-tab-button" data-tabs-target="#login" type="button" role="tab"
+                                        aria-controls="login" aria-selected="false">Login</button>
                                 </li>
                                 <li role="presentation">
                                     <button
-                                        class="block w-full rounded-t-lg p-4 transition duration-200 hover:bg-sky-500 hover:text-white aria-selected:bg-sky-500 aria-selected:text-white aria-selected:border-sky-700"
-                                        id="profile-tab" data-tabs-target="#sign-up" type="button" role="tab"
-                                        aria-controls="profile" aria-selected="false">Rejestracja</button>
+                                        class="block w-full rounded-t-lg p-4 transition duration-200 text-slate-700 hover:bg-sky-700/75 hover:text-white aria-selected:bg-sky-700 aria-selected:text-white aria-selected:border-sky-900"
+                                        id="sign-in-tab-button" data-tabs-target="#sign-up" type="button" role="tab"
+                                        aria-controls="sign-up" aria-selected="false">Rejestracja</button>
                                 </li>
 
                             </ul>
                         </div>
                         <div id="form-tab-content">
-                            <div class="hidden pt-6 space-y-3 md:space-y-4" id="sign-up" role="tabpanel"
-                                aria-labelledby="profile-tab">
-                                <input class="input" placeholder="Email" type="email" name="email" id="sign-up-email">
-                                <input class="input" placeholder="Password" type="password" name="password"
-                                    id="sign-up-pass">
-                                <div class="flex items-center gap-x-1 mb-4">
-                                    <input id="default-checkbox" type="checkbox" value=""
-                                        class="w-5 h-5 text-sky-600 bg-white border-sky-300 rounded focus:ring-sky-500 ">
-                                    <label for="default-checkbox" class="ms-2 text-sm font-medium text-sky-900 ">Wyrażam
-                                        zgodę na przetwarzanie moich danych osobowych</label>
-                                </div>
-                                <button type="submit" class="button">Zarejestruj się</button>
+                            <div class="hidden pt-6" id="sign-up" role="tabpanel" aria-labelledby="sign-up-tab">
+                                <form action="post" class="space-y-3" id="sign-up-form" novalidate>
+                                    <div class="space-y-2">
+                                        <label for="email" class="text-sm">Email*</label>
+                                        <input class="input" aria-describedby="sign-up-email-error" required
+                                            aria-required="true" placeholder="Email" type="email" name="email"
+                                            id="sign-up-email">
+                                        <span data-error-message id="sign-up-email-error"
+                                            class="mt-2 hidden text-sm text-red-500">Podaj poprawny
+                                            adres
+                                            e-mail</span>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="password" class="text-sm">Password*</label>
+                                        <input class="input" aria-describedby="sign-up-pass-error" required
+                                            aria-required="true" placeholder="Password" type="password" name="password"
+                                            id="sign-up-pass">
+                                        <span data-error-message id="sign-up-pass-error"
+                                            class="mt-2 hidden text-sm text-red-500">Hasło musi
+                                            mieć co najmniej 10
+                                            znaków</span>
+                                    </div>
+                                    <div class="flex items-center gap-x-1 mb-4 ">
+                                        <input id="personal-info" type="checkbox"
+                                            class="w-5 h-5 text-sky-600 bg-white border-sky-300 rounded focus:ring-sky-500 cursor-pointer">
+                                        <label for="personal-info"
+                                            class="ms-2 text-sm font-medium text-sky-900 cursor-pointer">Wyrażam
+                                            zgodę na przetwarzanie moich danych osobowych</label>
+                                    </div>
+                                    <button role="button" type="submit" class="button">Zarejestruj się</button>
+                                </form>
                             </div>
-                            <div class="hidden pt-6 space-y-3 md:space-y-4" id="login" role="tabpanel"
-                                aria-labelledby="dashboard-tab">
-                                <input class="input" placeholder="Email" type="email" name="email" id="login-email">
-                                <input class="input" placeholder="Password" type="password" name="password"
-                                    id="login-pass">
-                                <button type="submit" class="button">Zaloguj się</button>
+                            <div class="hidden pt-6" id="login" role="tabpanel" aria-labelledby="log-in-tab">
+                                <form action="post" class="space-y-3 mb-3" id="log-in-form" novalidate>
+                                    <div class="space-y-2">
+                                        <label for="email" class="text-sm leading-loose">Email*</label>
+                                        <input class="input" aria-describedby="log-in-email-error" required
+                                            aria-required="true" placeholder="Email" type="email" name="email"
+                                            id="login-email">
+                                        <span data-error-message id="log-in-email-error"
+                                            class="mt-2 hidden text-sm text-red-500">Podaj poprawny
+                                            adres
+                                            e-mail</span>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label for="password" class="text-sm leading-loose">Password*</label>
+                                        <input class="input" aria-describedby="log-in-pass-error" required
+                                            aria-required="true" placeholder="Password" type="password" name="password"
+                                            id="login-pass">
+                                        <span data-error-message id="log-in-pass-error"
+                                            class="mt-2 hidden text-sm text-red-500">Hasło musi
+                                            mieć co najmniej 10
+                                            znaków</span>
+                                    </div>
+                                    <button role="button" type="submit" class="button">Zaloguj się</button>
+                                </form>
                                 <a href="#" class="block link text-center">Nie pamiętam hasła</a>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </section>
             </div>
-            <footer class="w-full pt-10 pb-5 bg-sky-100 border-t border-sky-500">
+            <footer class="w-full pt-10 pb-5 bg-sky-50 border-t border-sky-500">
                 <div class="container">
                     <!-- Grid -->
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                         <div class="col-span-full lg:col-span-1">
-                            <a class="text-xl md:text-xl text-sky-500 font-semibold " href="#"
+                            <a class="text-xl md:text-xl text-sky-700 font-semibold " href="#"
                                 aria-label="Silesia.fm">Silesia.fm</a>
                             <p class="text-sky-800 mt-2 text-lg">Fajnie gramy!</p>
                         </div>
                         <!-- End Col -->
 
                         <div class="col-span-1">
-                            <h4 class="font-semibold text-sky-700">Przydatne linki</h4>
+                            <h3 class="font-semibold text-sky-700">Przydatne linki</h4>
 
-                            <div class="mt-3 grid space-y-2 md:space-y-3">
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="./shows.html"
-                                    aria-current="page">Audycje</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150"
-                                    href="./podcasts.html">Podkasty</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150"
-                                    href="./schedule.html">Ramówka</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150"
-                                    href="./index.html#events">Wydarzenia</a>
+                                <div class="mt-3 grid space-y-2 md:space-y-3">
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="./shows.html" aria-current="page">Audycje</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="./podcasts.html">Podkasty</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="./schedule.html">Ramówka</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="./index.html#events">Wydarzenia</a>
 
-                            </div>
+                                </div>
                         </div>
                         <!-- End Col -->
 
                         <div class="col-span-1">
-                            <h4 class="font-semibold text-sky-700">Informacje</h4>
+                            <h3 class="font-semibold text-sky-700">Informacje</h4>
 
-                            <div class="mt-3 grid space-y-2 md:space-y-3">
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="#"
-                                    aria-current="page">O
-                                    nas</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="#">Reklama</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="#">Praca <span
-                                        class="inline ms-1 text-xs bg-sky-500 text-white py-1 px-2 rounded-lg">Zatrudniamy</span></a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="#">Kontakt</a>
+                                <div class="mt-3 grid space-y-2 md:space-y-3">
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150" href="#"
+                                        aria-current="page">O
+                                        nas</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="#">Reklama</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150" href="#">Praca
+                                        <span
+                                            class="inline ms-1 text-xs bg-sky-700 text-white py-1 px-2 rounded-lg">Zatrudniamy</span></a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="#">Kontakt</a>
 
-                            </div>
+                                </div>
                         </div>
                         <!-- End Col -->
 
                         <div class="col-span-1">
-                            <h4 class="font-semibold text-sky-700">Regulaminy</h4>
+                            <h3 class="font-semibold text-sky-700">Regulaminy</h4>
 
-                            <div class="mt-3 grid space-y-2 md:space-y-3">
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150" href="#">Konkursy</a>
-                                <a class="text-sky-600 hover:text-sky-900 transition duration-150"
-                                    href="#">Samoregulacja</a>
-                            </div>
+                                <div class="mt-3 grid space-y-2 md:space-y-3">
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="#">Konkursy</a>
+                                    <a class="text-sky-700 hover:text-sky-900 transition duration-150"
+                                        href="#">Samoregulacja</a>
+                                </div>
                         </div>
                         <!-- End Col -->
 
                         <div class="col-span-full">
-                            <h4 class="font-semibold text-sky-700">Bądź na bieżąco</h4>
-                            <form>
-                                <div
-                                    class="mt-4 flex flex-col items-start sm:items-center gap-2 sm:flex-row sm:gap-3 rounded-lg">
-                                    <div class="w-full">
-                                        <label for="hero-input" class="sr-only">Subskrypcja</label>
-                                        <input type="text" id="hero-input" name="hero-input" class="input"
-                                            placeholder="Email">
+                            <h3 class="font-semibold text-sky-700">Bądź na bieżąco</h4>
+                                <form>
+                                    <div
+                                        class="mt-4 flex flex-col items-start sm:items-center gap-2 sm:flex-row sm:gap-3 rounded-lg">
+                                        <div class="w-full">
+                                            <label for="hero-input" class="sr-only">Subskrybuj nasz newsletter</label>
+                                            <input type="text" id="hero-input" name="hero-input" class="input"
+                                                placeholder="Email">
+                                        </div>
+                                        <a class="button" href="#">
+                                            Subskrybuj
+                                        </a>
                                     </div>
-                                    <a class="button" href="#">
-                                        Subskrybuj
-                                    </a>
-                                </div>
-                                <p class="mt-3 text-sm text-sky-700">
-                                    Otrzymuj informacje o najnowszych wydarzeniach i pokazach. Bez spamu
-                                </p>
-                            </form>
+                                    <p class="mt-3 text-sm text-sky-700">
+                                        Otrzymuj informacje o najnowszych wydarzeniach i pokazach. Bez spamu
+                                    </p>
+                                </form>
                         </div>
                         <!-- End Col -->
                     </div>
@@ -592,32 +639,32 @@
 
                         <!-- Social Brands -->
                         <div class="flex md:justify-center items-center">
-                            <a href="#"
-                                class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                            <a href="#" aria-label="instagram" class=" text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2
+                                rounded-lg focus:ring-2 focus:ring-sky-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7"
                                     viewBox="0 0 448 512" fill="currentColor">
                                     <path
                                         d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                            <a href="#" aria-label="facebook"
+                                class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7"
                                     viewBox="0 0 448 512" fill="currentColor">
                                     <path
                                         d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                            <a href="#" aria-label="twitter"
+                                class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7"
                                     viewBox="0 0 448 512" fill="currentColor">
                                     <path
                                         d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM351.3 199.3v0c0 86.7-66 186.6-186.6 186.6c-37.2 0-71.7-10.8-100.7-29.4c5.3 .6 10.4 .8 15.8 .8c30.7 0 58.9-10.4 81.4-28c-28.8-.6-53-19.5-61.3-45.5c10.1 1.5 19.2 1.5 29.6-1.2c-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3c-9-6-16.4-14.1-21.5-23.6s-7.8-20.2-7.7-31c0-12.2 3.2-23.4 8.9-33.1c32.3 39.8 80.8 65.8 135.2 68.6c-9.3-44.5 24-80.6 64-80.6c18.9 0 35.9 7.9 47.9 20.7c14.8-2.8 29-8.3 41.6-15.8c-4.9 15.2-15.2 28-28.8 36.1c13.2-1.4 26-5.1 37.8-10.2c-8.9 13.1-20.1 24.7-32.9 34c.2 2.8 .2 5.7 .2 8.5z" />
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-sky-500 transition duration-150 hover:bg-sky-500 hover:text-white p-2 rounded-lg">
+                            <a href="#" aria-label="youtube"
+                                class="text-sky-700 transition duration-150 hover:bg-sky-700 hover:text-white p-2 rounded-lg focus:ring-4 focus:ring-sky-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-7 md:h-7"
                                     viewBox="0 0 576 512" fill="currentColor">
                                     <path
@@ -633,11 +680,15 @@
     </div>
     <script type="module" src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <script type="module" src="./src/js/script.js"></script>
+    <script type="module" src="./src/js/forms.js"></script>
     <script type="module">
         const formId = location.hash;
         window.addEventListener('load', (e) => {
             const formTabs = FlowbiteInstances.getInstance('Tabs', 'form-tab');
             formTabs.show(formId || '#login');
+            window.scrollTo({
+                top: 0
+            });
         });
     </script>
 </body>

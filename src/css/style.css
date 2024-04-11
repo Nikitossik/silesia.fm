@@ -42,22 +42,26 @@
 
 @layer components {
   .button {
-    @apply bg-sky-500 hover:bg-sky-400 text-white font-medium py-2 px-4  rounded-lg transition duration-150
-     focus:shadow-sm focus:shadow-blue-400 focus:ring-2 focus:ring-blue-300;
+    @apply bg-sky-700 hover:bg-sky-600 text-white font-medium py-2 px-4  rounded-lg transition duration-150
+  focus:ring-4 focus:ring-sky-300 focus-visible:ring-sky-300;
   }
 
   .input {
     @apply py-2 px-4 block w-full text-sm sm:text-base bg-white transition duration-150 border-2 border-sky-500 rounded-lg outline-0 
-    focus:shadow-sm focus:shadow-sky-400 focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:pointer-events-none;
+    focus:ring-4 focus:ring-sky-200 focus:border-sky-500 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:ring-red-200 focus:border-red-500;
   }
 
   .link {
-    @apply text-sky-400 text-lg hover:text-sky-500 font-medium sm:text-lg transition-all duration-150 underline underline-offset-2
+    @apply text-sky-700 text-lg hover:text-sky-800 font-medium sm:text-lg transition-all duration-150 underline underline-offset-2
     hover:decoration-2;
   }
 
   .decorative-pill {
-    @apply shadow-md shadow-sky-400 bg-sky-400 text-white py-1 px-2;
+    @apply shadow-md shadow-sky-400 bg-sky-600 text-white py-1 px-2;
   }
 
   /*cards*/
